@@ -1,0 +1,67 @@
+@font-face{font-family:"Futura-Bold-Cond";src:url("https://cdn.codenames.game/font/FuturaPTCond-Bold.eot?#iefix") format("embedded-opentype"), url("https://cdn.codenames.game/font/FuturaPTCond-Bold.otf") format("opentype"), url("https://cdn.codenames.game/font/FuturaPTCond-Bold.woff") format("woff"), url("https://cdn.codenames.game/font/FuturaPTCond-Bold.ttf") format("truetype"), url("https://cdn.codenames.game/font/FuturaPTCond-Bold.svg#FuturaPTCond-Bold") format("svg");font-weight:normal;font-style:normal;}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body.red {
+  background-image: url(https://cdn.codenames.game/img/bg-red.jpg);
+  background-size: cover;
+}
+body.blue {
+  background-image: url(https://cdn.codenames.game/img/bg-blue.jpg);
+  background-size: cover;
+}
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+.card {
+  position: relative;
+  width: 202px;
+  height: 130px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-image: url(https://cdn.codenames.game/img/card/card-gray.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card.red {
+  background-image: url(https://cdn.codenames.game/img/card/card-red.png);
+}
+.card.black {
+  background-image: url(https://cdn.codenames.game/img/card/card-black.png);
+  color: white;
+}
+.card.blue {
+  background-image: url(https://cdn.codenames.game/img/card/card-blue.png);
+}
+.card.beige:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.6;
+  background-color: white;
+  border-radius: 10px;
+}
+.card .content {
+  position: relative;
+  top: 82px;
+  font-size: 1.2em;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Futura-Bold-Cond;
+  font-weight: bold;
+}
+
